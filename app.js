@@ -6,9 +6,7 @@ dotenv.load({ path: '.env' });
 
 const bot = new Telegraf(process.env.TELEBOT_JINTECH);
 
-const commonText = `
-    Jai Jinendra!\n\nWelcome to jainism.tech bot.\n\nMessage in following format to get the definition of any Jainism Terminology.\n\n/define केवलज्ञान\n\nContact @Sowmay for technical and @Imdivyag for terminology suggestions.
-`;
+const commonText = `Jai Jinendra!\n\nWelcome to jainism.tech bot.\n\nMessage in following format to get the definition of any Jainism Terminology.\n\n/define केवलज्ञान\n\nContact @Sowmay for feedback & terminology suggestions.`;
 
 bot.start((req) => req.reply(commonText));
 
