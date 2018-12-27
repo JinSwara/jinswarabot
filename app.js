@@ -15,7 +15,7 @@ bot.command('define', (req) => {
     if (define[term]) {
         req.reply(define[term]);
     } else {
-        req.reply(`The term ${term} is stored in our database. Contact @Sowmay or @Divya for suggestions and feedback.`);
+        req.reply(`The term ${term} is stored in our database yet.`);
     }
 });
 
