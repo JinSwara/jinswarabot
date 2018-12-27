@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "pm2 stop maker && pm2 start app.js --name maker && pm2 logs"
   },
   "author": "@sowmay_jain",
   "license": "ISC",
