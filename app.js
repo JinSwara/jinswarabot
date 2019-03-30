@@ -6,9 +6,21 @@ dotenv.load({ path: '.env' });
 
 const bot = new Telegraf(process.env.TELEBOT_JINTECH);
 
-const commonText = `Jai Jinendra!\n\nWelcome to jainism.tech bot.\n\nMessage in following format to get the definition of any Jainism Terminology.\n\n/define केवलज्ञान\n\nContact @Sowmay for feedback & terminology suggestions.`;
+const commonText = `Jai Jinendra!\n\nWelcome to JinSwara bot.\n\nMessage in following format to get the definition of any Jainism Terminology.\n\n/define केवलज्ञान`;
 
 bot.start((req) => req.reply(commonText));
+
+bot.command('about', (req) => {
+    req.reply("I'm JinSwara! Please visit jinswara.com for more details.");
+});
+
+bot.command('ask', (req) => {
+    req.reply("Please visit forum.jinswara.com");
+});
+
+bot.command('contact', (req) => {
+    req.reply("Please contact connect@jinswara.com");
+});
 
 bot.command('define', (req) => {
     let term = req.message.text.split(" ")[1];
@@ -25,4 +37,4 @@ bot.on('message', (req) => {
 
 bot.startPolling();
 
-console.log("@jintechbot started!");
+console.log("@JinSwaraBot Started!");
