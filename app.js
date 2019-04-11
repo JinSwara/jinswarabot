@@ -31,6 +31,11 @@ bot.command('define', (req) => {
     }
 });
 
+bot.command('scripture', (req) => {
+    const remoteFile = 'http://www.atmadharma.com/shastras/mokshmargprakashak_hin_scn.pdf'
+    return req.telegram.sendDocument(req.message.chat.id, remoteFile);
+});
+
 bot.on('message', (req) => {
     req.reply(commonText);
 });
